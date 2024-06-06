@@ -17,7 +17,6 @@ SetIntersection <- function(A, B) {
 }
 
 
-
 SetUnion = function (A, B) {
   AuB = c(A, B) #concatenate
   AuB = unique(sort(AuB))
@@ -25,16 +24,12 @@ SetUnion = function (A, B) {
 }
 
 
-
 SetComplement = function (A, B, U = c()) {
   AuB <- c(A,B)
   U <- c(U, AuB)|> 
     sort() |>
     unique() |>
-
-
   U <- U[!U %in% A] 
-  
   return(U)
 }
 
